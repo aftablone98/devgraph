@@ -49,9 +49,12 @@ class ProjectCreate(BaseModel):
 
 @app.get("/")
 def root():
+    profile = get_user_profile("Aftab Lone")
     return {
-        "message": "DevGraph API is running",
-        "version": "1.0.0"
+        "name": profile[0],
+        "role": profile[1],
+        "skills": profile[2],
+        "projects": profile[3]
     }
 
 
