@@ -80,7 +80,12 @@ def user_profile(user_name: str):
             detail="User not found"
         )
 
-    return profile
+    return {
+        "name": profile[0],
+        "role": profile[1],
+        "skills": profile[2],
+        "projects": profile[3]
+    }
 
 
 @app.get("/users/{user_name}/skills")
@@ -125,4 +130,9 @@ def complete_profile(user_name: str):
             detail="User not found"
         )
 
-    return profile
+    return {
+        "name": profile[0],
+        "role": profile[1],
+        "skills": profile[2],
+        "projects": profile[3]
+    }
