@@ -143,6 +143,20 @@ backend/.env
 
 with your CognoDB credentials.
 
+
+
+🌱 Seed the Database
+
+Run:
+python3 scripts/seed.py
+
+This seeds CognoDB with sample developer, skill, and project data.
+
+The seed script is idempotent, so it can safely be run multiple times without creating duplicate relationships.
+
+
+
+
 🗄️ Test CognoDB Connection
 
 Run:
@@ -314,8 +328,6 @@ Production deployment
 👨‍💻 Author
 
 Aftab Lone
-
-DevOps Engineer
 
 📄 License
 
